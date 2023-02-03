@@ -8,7 +8,7 @@ choose(){
   print("Digite o número do calculo desejado:");
   print("1-Calcular a área de um círculo");
   print("2-Calcular o salário de um funcionário");
-  print("3-Calcular o salário de um funcionário sobre suas vendas");
+  print("3-Calcular o salário de um vendedor sobre suas vendas");
   print("4-Calcular a 1ª Lei da termodinâmica");
   print("5-Calcular a 2ª Lei da termodinâmica");
   int inputNumber = int.parse(stdin.readLineSync()!);
@@ -17,7 +17,7 @@ choose(){
   }else if(inputNumber == 2){
     workerSalaryCalculation();
   }else if(inputNumber == 3){
-
+    calculateCommission();
   }else if(inputNumber == 4){
 
   }else if(inputNumber == 5){
@@ -56,5 +56,16 @@ workerSalaryCalculation(){
   double hourlyWage = double.parse(stdin.readLineSync()!);
   double salary = workedHours * hourlyWage;
   print("\nCHAPA = $identificationNumber\nSALÁRIO = R\$ ${salary.toStringAsFixed(2)}");
+  chooseAgain();
+}
+calculateCommission(){
+  print("Digite o nome do vendedor:");
+  String name = stdin.readLineSync()!;
+  print("Digite o salário do vendedor:");
+  double salary = double.parse(stdin.readLineSync()!);
+  print("Digite o total de vendas em dinheiro feito pelo vendedor:");
+  double sales = double.parse(stdin.readLineSync()!);
+  double finalSalary = salary + sales * 0.15;
+  print("$name receberá R\$ ${finalSalary.toStringAsFixed(2)} esse mês.");
   chooseAgain();
 }
