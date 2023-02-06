@@ -36,8 +36,7 @@ chooseAgain(){
   String? newChoose = stdin.readLineSync().toString().toUpperCase();
   if(newChoose == "S"){
     choose();
-  }
-  else{
+  }else{
     return;
   }
 }
