@@ -43,7 +43,7 @@ chooseAgain(){
 }
 
 calculationCircleArea(){
-  print("Digite o valor do rario do círculo:");
+  print("Digite o valor do raio do círculo:");
   double radius = double.parse(stdin.readLineSync()!);
   double result = (radius * radius) * math.pi;
   print("A area do circulo é $result");
